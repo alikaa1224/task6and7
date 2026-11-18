@@ -4,7 +4,7 @@
 int main(void){
   int ch;
 
-  while ((ch = getchar()) != EOF{
+  while ((ch = getchar()) != EOF){
     if (ch == 'e'){
       putchar('i');
     } else {
