@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int sum_of_digits(int num) {
+int sumdig(int num) {
     int sum = 0;
     num = abs(num);
     while (num > 0) {
@@ -18,7 +18,7 @@ int main(void) {
     int count2 = 0, sum2 = 0; 
 
     while (scanf("%d", &num) == 1 && num != 0) {
-        int s = sum_of_digits(num);
+        int s = sumdig(num);
         if (s % 2 == 0) {
             count1++;
             sum1 += num;
