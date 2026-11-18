@@ -1,27 +1,26 @@
+//15
 #include <stdio.h>
 
 int main(void) {
     int ch;
-    int prev = -1;
-    int run = 0;
-    int seq = 0;
-    int total = 0;
-
+    int predch = -1;
+    int len = 0;
+    int seriescount = 0;
+    int allch = 0;
     while ((ch = getchar()) != EOF) {
-        total++;
-        if (ch == prev) {
-            run++;
+        allch++;
+        if (ch == predch) {
+            len++;
         } else {
-            run = 1;
+            len = 1;
         }
-        if (run == 3) {
-            seq++;
+        if (len == 3) {
+            seriescount++;
         }
-        prev = ch;
+        predch = ch;
     }
-
     printf("%d", seq);
-    printf("%d", total);
+    printf("%d", allch);
 
     return 0;
 }
